@@ -111,6 +111,11 @@ This project helps practice:
 
 ---
 
-## Author
+## Credits
+*Created for learning Python GUI development and authentication system concepts.*
 
-Created for learning Python GUI development and authentication system concepts.
+
+---
+
+> Originally inspired by a YouTube tutorial. Independently redesigned and further developed by **Chathuranga.K**.
+
