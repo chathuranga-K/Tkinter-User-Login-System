@@ -94,26 +94,6 @@ submit_button = Button(
 )
 #submit_button.grid(row=2, column=0)
 
-# Button - Delete
-delete_button = Button(
-    window,
-    width=7,
-    text="Delete",
-    font=('Arial', 12),
-    command=delete_function # set command
-)
-delete_button.grid(row=2, column=1)
-
-# Button - Backspace
-backspace_button = Button(
-    window,
-    width=10,
-    text="Backspace",
-    font=('Arial', 12),
-    command=backspace_function # set command
-)
-backspace_button.grid(row=2, column=2)
-
 # Label - login notification
 login_label = Label(
     text='',
