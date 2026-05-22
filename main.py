@@ -4,16 +4,6 @@
 from tkinter import*
 
 # ---------- functions ----------
-# submit username
-def submit_function():
-    user = username.get() # get username as string value
-    print(f"User: {user}") # print CMD output
-    username.configure(state="disabled") # Disable the username Entry
-    submit_button.configure(state="disabled") # Disable the submit Button
-
-# delete username
-def delete_function():
-    username.delete(0, "end")
 
 # delete last character of username
 def backspace_function():
@@ -61,7 +51,6 @@ username = Entry(
     background="light gray",
     foreground="black",
 )
-username.insert(0, "@username") # insert default text placeholder
 username.grid(row=0,column=1 ,columnspan=3 , pady=20)
 
 # Label - Password
@@ -83,16 +72,6 @@ password = Entry(
     show="*", # hide user input visibility
 )
 password.grid(row=1,column=1 ,columnspan=3 , pady=20)
-
-# Button - Submit
-submit_button = Button(
-    window,
-    width=7,
-    text="Submit",
-    font=('Arial', 12),
-    command=submit_function # set command
-)
-#submit_button.grid(row=2, column=0)
 
 # Label - login notification
 login_label = Label(
