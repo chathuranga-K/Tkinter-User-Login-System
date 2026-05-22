@@ -6,13 +6,16 @@ from tkinter import*
 # ---------- functions ----------
 
 # delete last character of username
-def backspace_function():
-    username.delete(len(username.get())-1, "end")
+def username_clear():
+    username.delete(0, "end")
+
+def password_clear():
+    password.delete(0, "end")
 
 # check user login validation
 def login_function():
     user_password = password.get() # initialize variables
-    if username.get() != "@username" :
+    if username.get():
         message:str="Login successful"
         login_label.configure(text=message)
         login_label.grid(row=4, column=0)
@@ -56,7 +59,20 @@ username = Entry(
     background="light gray",
     foreground="black",
 )
-username.grid(row=0,column=1 ,columnspan=3 , pady=20)
+username.grid(row=0,column=1 , pady=20)
+
+# clear icon image
+clear_symbol = PhotoImage(file='Image//black-color-clear-symbol.png')
+
+# Button - username clear icon
+username_clearIcon = Button(
+    window,
+    borderwidth=0,
+    image=clear_symbol,
+    compound="right",
+    command=username_clear
+)
+username_clearIcon.grid(row=0, column=2)
 
 # Label - Password
 Label_password = Label(
@@ -76,7 +92,17 @@ password = Entry(
     foreground="black",
     show="*", # hide user input visibility
 )
-password.grid(row=1,column=1 ,columnspan=3 , pady=20)
+password.grid(row=1,column=1, pady=20)
+
+# Button - password clear icon
+password_clearIcon = Button(
+    window,
+    borderwidth=0,
+    image=clear_symbol,
+    compound="right",
+    command=password_clear
+)
+password_clearIcon.grid(row=1, column=2)
 
 # Label - login notification
 login_label = Label(
