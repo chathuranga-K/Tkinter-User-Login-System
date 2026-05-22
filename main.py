@@ -23,6 +23,11 @@ def login_function():
 
 # ---------------- Tkinter GUI Window ----------------
 window = Tk()
+
+# window icon photo
+image = PhotoImage(file='Image//add-male-user.png')
+window.iconphoto(False, image)
+
 window.title("User Login") # window Title
 window.geometry("550x260") # window size dimensions
 
