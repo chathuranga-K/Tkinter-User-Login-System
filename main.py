@@ -1,5 +1,8 @@
 # User Login Page - tkinter
 
+# import save info function from Datasets.py
+from Datasets import save_info
+
 # import all packages from tkinter module
 from tkinter import*
 
@@ -120,5 +123,12 @@ login_button = Button(
     command=login_function
 )
 login_button.grid(row=3, column=0)
+
+# assign username & passwords to each variable
+login_username = username.get()
+login_password = password.get()
+
+# save user information to a dict
+save_info(login_username, login_password)
 
 window.mainloop() # output
